@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:simplepdl="http://simplepdl"
     xsi:schemaLocation="http://simplepdl SimplePDL.ecore"
-    name="PremierProcessus">
+    name="P1">
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       linksToSuccessors="//@processElements.2"
