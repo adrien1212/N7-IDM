@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    xsi:schemaLocation="http://petrinet PetriNet.ecore"
+    name="MonPetritNet">
+  <petriElements
+      xsi:type="petrinet:Place"
+      name="P1"
+      outgoing="//@petriElements.2"/>
+  <petriElements
+      xsi:type="petrinet:Transition"
+      name="T1"
+      incoming="//@petriElements.2"
+      outgoing="//@petriElements.4"/>
+  <petriElements
+      xsi:type="petrinet:Arc"
+      target="//@petriElements.1"
+      source="//@petriElements.0"/>
+  <petriElements
+      xsi:type="petrinet:Place"
+      name="P2"
+      incoming="//@petriElements.4"/>
+  <petriElements
+      xsi:type="petrinet:Arc"
+      target="//@petriElements.3"
+      source="//@petriElements.1"/>
+</petrinet:PetriNet>
