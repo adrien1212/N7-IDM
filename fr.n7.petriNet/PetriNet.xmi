@@ -17,6 +17,7 @@
       outgoing="//@petriElements.4"/>
   <petriElements
       xsi:type="petrinet:Arc"
+      weight="1"
       target="//@petriElements.1"
       source="//@petriElements.0"/>
   <petriElements
