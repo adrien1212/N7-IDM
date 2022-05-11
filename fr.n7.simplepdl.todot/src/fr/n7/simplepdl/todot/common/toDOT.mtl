@@ -3,6 +3,7 @@
 
 
 [template public generateElement(aProcess : Process)]
+[comment @main/]
 [file (aProcess.name.concat('.dot'), false, 'UTF-8')]
 process [aProcess.name/] {
 [for (ws : WorkSequence | aProcess.processElements->getWSs())]

@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module toDTO('http://petrinet')]
+
+
+[template public toDTO(aPetriNet : PetriNet)]
+
+[/template]

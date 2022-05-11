@@ -1,0 +1,3 @@
+process P1 {
+	WD00 -> WD01 [arrowhead=vee label=s2s]
+}
