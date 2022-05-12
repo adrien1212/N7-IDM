@@ -1,0 +1,16 @@
+process ex1 {
+	create 4 of Voiture
+	create 2 of Garagiste
+	
+	wd Reparer {
+		need 2 Garagiste
+		need 1 Voiture
+	}
+	
+	wd Vendre {
+		need 1 Garagiste
+		need 1 Voiture
+	}
+	
+	ws finishToStart from Reparer to Vendre
+}
