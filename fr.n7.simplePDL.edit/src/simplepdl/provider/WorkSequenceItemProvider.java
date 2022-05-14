@@ -165,8 +165,10 @@ public class WorkSequenceItemProvider extends ProcessElementItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SimplepdlPackage.WORK_SEQUENCE__PREDECESSOR:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case SimplepdlPackage.WORK_SEQUENCE__SUCCESSOR:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
 		super.notifyChanged(notification);
