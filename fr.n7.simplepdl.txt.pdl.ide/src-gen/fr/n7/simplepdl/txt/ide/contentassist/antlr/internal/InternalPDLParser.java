@@ -1623,40 +1623,47 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WorkDefinition__Group__3__Impl"
-    // InternalPDL.g:537:1: rule__WorkDefinition__Group__3__Impl : ( ( rule__WorkDefinition__NeedAssignment_3 )? ) ;
+    // InternalPDL.g:537:1: rule__WorkDefinition__Group__3__Impl : ( ( rule__WorkDefinition__NeedAssignment_3 )* ) ;
     public final void rule__WorkDefinition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalPDL.g:541:1: ( ( ( rule__WorkDefinition__NeedAssignment_3 )? ) )
-            // InternalPDL.g:542:1: ( ( rule__WorkDefinition__NeedAssignment_3 )? )
+            // InternalPDL.g:541:1: ( ( ( rule__WorkDefinition__NeedAssignment_3 )* ) )
+            // InternalPDL.g:542:1: ( ( rule__WorkDefinition__NeedAssignment_3 )* )
             {
-            // InternalPDL.g:542:1: ( ( rule__WorkDefinition__NeedAssignment_3 )? )
-            // InternalPDL.g:543:2: ( rule__WorkDefinition__NeedAssignment_3 )?
+            // InternalPDL.g:542:1: ( ( rule__WorkDefinition__NeedAssignment_3 )* )
+            // InternalPDL.g:543:2: ( rule__WorkDefinition__NeedAssignment_3 )*
             {
              before(grammarAccess.getWorkDefinitionAccess().getNeedAssignment_3()); 
-            // InternalPDL.g:544:2: ( rule__WorkDefinition__NeedAssignment_3 )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // InternalPDL.g:544:2: ( rule__WorkDefinition__NeedAssignment_3 )*
+            loop4:
+            do {
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==25) ) {
-                alt4=1;
-            }
-            switch (alt4) {
-                case 1 :
-                    // InternalPDL.g:544:3: rule__WorkDefinition__NeedAssignment_3
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__WorkDefinition__NeedAssignment_3();
-
-                    state._fsp--;
+                if ( (LA4_0==25) ) {
+                    alt4=1;
+                }
 
 
-                    }
-                    break;
+                switch (alt4) {
+            	case 1 :
+            	    // InternalPDL.g:544:3: rule__WorkDefinition__NeedAssignment_3
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__WorkDefinition__NeedAssignment_3();
 
-            }
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop4;
+                }
+            } while (true);
 
              after(grammarAccess.getWorkDefinitionAccess().getNeedAssignment_3()); 
 
@@ -1760,7 +1767,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:583:1: ( rule__Guidance__Group__0__Impl rule__Guidance__Group__1 )
             // InternalPDL.g:584:2: rule__Guidance__Group__0__Impl rule__Guidance__Group__1
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__Guidance__Group__0__Impl();
 
             state._fsp--;
@@ -1835,7 +1842,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:610:1: ( rule__Guidance__Group__1__Impl rule__Guidance__Group__2 )
             // InternalPDL.g:611:2: rule__Guidance__Group__1__Impl rule__Guidance__Group__2
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             rule__Guidance__Group__1__Impl();
 
             state._fsp--;
@@ -2086,7 +2093,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:691:1: ( rule__Guidance__Group_2__1__Impl rule__Guidance__Group_2__2 )
             // InternalPDL.g:692:2: rule__Guidance__Group_2__1__Impl rule__Guidance__Group_2__2
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_11);
             rule__Guidance__Group_2__1__Impl();
 
             state._fsp--;
@@ -2223,7 +2230,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalPDL.g:732:3: rule__Guidance__Group_2_2__0
             	    {
-            	    pushFollow(FOLLOW_11);
+            	    pushFollow(FOLLOW_12);
             	    rule__Guidance__Group_2_2__0();
 
             	    state._fsp--;
@@ -2424,7 +2431,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:799:1: ( rule__WorkSequence__Group__0__Impl rule__WorkSequence__Group__1 )
             // InternalPDL.g:800:2: rule__WorkSequence__Group__0__Impl rule__WorkSequence__Group__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__WorkSequence__Group__0__Impl();
 
             state._fsp--;
@@ -2499,7 +2506,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:826:1: ( rule__WorkSequence__Group__1__Impl rule__WorkSequence__Group__2 )
             // InternalPDL.g:827:2: rule__WorkSequence__Group__1__Impl rule__WorkSequence__Group__2
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_14);
             rule__WorkSequence__Group__1__Impl();
 
             state._fsp--;
@@ -2659,7 +2666,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:880:1: ( rule__WorkSequence__Group__3__Impl rule__WorkSequence__Group__4 )
             // InternalPDL.g:881:2: rule__WorkSequence__Group__3__Impl rule__WorkSequence__Group__4
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_15);
             rule__WorkSequence__Group__3__Impl();
 
             state._fsp--;
@@ -2899,7 +2906,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:961:1: ( rule__Need__Group__0__Impl rule__Need__Group__1 )
             // InternalPDL.g:962:2: rule__Need__Group__0__Impl rule__Need__Group__1
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__Need__Group__0__Impl();
 
             state._fsp--;
@@ -2974,7 +2981,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:988:1: ( rule__Need__Group__1__Impl rule__Need__Group__2 )
             // InternalPDL.g:989:2: rule__Need__Group__1__Impl rule__Need__Group__2
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Need__Group__1__Impl();
 
             state._fsp--;
@@ -3214,7 +3221,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:1069:1: ( rule__Resource__Group__0__Impl rule__Resource__Group__1 )
             // InternalPDL.g:1070:2: rule__Resource__Group__0__Impl rule__Resource__Group__1
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__Resource__Group__0__Impl();
 
             state._fsp--;
@@ -3289,7 +3296,7 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
             // InternalPDL.g:1096:1: ( rule__Resource__Group__1__Impl rule__Resource__Group__2 )
             // InternalPDL.g:1097:2: rule__Resource__Group__1__Impl rule__Resource__Group__2
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_17);
             rule__Resource__Group__1__Impl();
 
             state._fsp--;
@@ -4100,14 +4107,15 @@ public class InternalPDLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x00000000084E0000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00000000084C0002L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000002020000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000007800L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000007800L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000004000000L});
 
 }

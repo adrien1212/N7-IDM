@@ -3,7 +3,7 @@
    <feature url="features/fr.n7.eclipse.feature.exemple_1.0.0.202205091859.jar" id="fr.n7.eclipse.feature.exemple" version="1.0.0.202205091859">
       <category name="N7"/>
    </feature>
-   <feature url="features/fr.n7.eclipse.feature.exemple_1.0.0.202205151829.jar" id="fr.n7.eclipse.feature.exemple" version="1.0.0.202205151829">
+   <feature url="features/fr.n7.eclipse.feature.exemple_1.0.0.202205170911.jar" id="fr.n7.eclipse.feature.exemple" version="1.0.0.202205170911">
       <category name="N7 GLS Feature"/>
    </feature>
    <category-def name="N7" label="exemple"/>

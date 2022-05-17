@@ -54,10 +54,10 @@ public class GenerateAll {
 	 * @generated
 	 */
 	public GenerateAll(URI modelURI, IContainer targetFolder, List<? extends Object> arguments) {
-		this.modelURI = modelURI;
-		this.targetFolder = targetFolder;
-		this.arguments = arguments;
-	}
+    this.modelURI = modelURI;
+    this.targetFolder = targetFolder;
+    this.arguments = arguments;
+  }
 
 	/**
 	 * Launches the generation.
@@ -69,18 +69,18 @@ public class GenerateAll {
 	 * @generated
 	 */
 	public void doGenerate(IProgressMonitor monitor) throws IOException {
-		if (!targetFolder.getLocation().toFile().exists()) {
-			targetFolder.getLocation().toFile().mkdirs();
-		}
-		
-		monitor.subTask("Loading...");
-		fr.n7.petrinet.totina.common.ToTina gen0 = new fr.n7.petrinet.totina.common.ToTina(modelURI, targetFolder.getLocation().toFile(), arguments);
-		monitor.worked(1);
-		String generationID = org.eclipse.acceleo.engine.utils.AcceleoLaunchingUtil.computeUIProjectID("fr.n7.petrinet.totina", "fr.n7.petrinet.totina.common.ToTina", modelURI.toString(), targetFolder.getFullPath().toString(), new ArrayList<String>());
-		gen0.setGenerationID(generationID);
-		gen0.doGenerate(BasicMonitor.toMonitor(monitor));
-			
-		
-	}
+    if (!targetFolder.getLocation().toFile().exists()) {
+      targetFolder.getLocation().toFile().mkdirs();
+    }
+    
+    monitor.subTask("Loading...");
+    fr.n7.petrinet.totina.common.ToTina gen0 = new fr.n7.petrinet.totina.common.ToTina(modelURI, targetFolder.getLocation().toFile(), arguments);
+    monitor.worked(1);
+    String generationID = org.eclipse.acceleo.engine.utils.AcceleoLaunchingUtil.computeUIProjectID("fr.n7.petrinet.totina", "fr.n7.petrinet.totina.common.ToTina", modelURI.toString(), targetFolder.getFullPath().toString(), new ArrayList<String>());
+    gen0.setGenerationID(generationID);
+    gen0.doGenerate(BasicMonitor.toMonitor(monitor));
+      
+    
+  }
 
 }

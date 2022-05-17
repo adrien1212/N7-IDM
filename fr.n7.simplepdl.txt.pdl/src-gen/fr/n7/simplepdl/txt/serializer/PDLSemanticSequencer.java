@@ -142,7 +142,7 @@ public class PDLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     WorkDefinition returns WorkDefinition
 	 *
 	 * Constraint:
-	 *     (name=ID need+=Need?)
+	 *     (name=ID need+=Need*)
 	 * </pre>
 	 */
 	protected void sequence_WorkDefinition(ISerializationContext context, WorkDefinition semanticObject) {

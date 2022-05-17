@@ -475,7 +475,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWorkDefinition"
-    // InternalPDL.g:194:1: ruleWorkDefinition returns [EObject current=null] : (otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )? otherlv_4= '}' ) ;
+    // InternalPDL.g:194:1: ruleWorkDefinition returns [EObject current=null] : (otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )* otherlv_4= '}' ) ;
     public final EObject ruleWorkDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -490,11 +490,11 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalPDL.g:200:2: ( (otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )? otherlv_4= '}' ) )
-            // InternalPDL.g:201:2: (otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )? otherlv_4= '}' )
+            // InternalPDL.g:200:2: ( (otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )* otherlv_4= '}' ) )
+            // InternalPDL.g:201:2: (otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )* otherlv_4= '}' )
             {
-            // InternalPDL.g:201:2: (otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )? otherlv_4= '}' )
-            // InternalPDL.g:202:3: otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )? otherlv_4= '}'
+            // InternalPDL.g:201:2: (otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )* otherlv_4= '}' )
+            // InternalPDL.g:202:3: otherlv_0= 'wd' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_need_3_0= ruleNeed ) )* otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,14,FOLLOW_3); 
 
@@ -530,47 +530,54 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getWorkDefinitionAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalPDL.g:228:3: ( (lv_need_3_0= ruleNeed ) )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            // InternalPDL.g:228:3: ( (lv_need_3_0= ruleNeed ) )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==21) ) {
-                alt3=1;
-            }
-            switch (alt3) {
-                case 1 :
-                    // InternalPDL.g:229:4: (lv_need_3_0= ruleNeed )
-                    {
-                    // InternalPDL.g:229:4: (lv_need_3_0= ruleNeed )
-                    // InternalPDL.g:230:5: lv_need_3_0= ruleNeed
-                    {
-
-                    					newCompositeNode(grammarAccess.getWorkDefinitionAccess().getNeedNeedParserRuleCall_3_0());
-                    				
-                    pushFollow(FOLLOW_7);
-                    lv_need_3_0=ruleNeed();
-
-                    state._fsp--;
+                if ( (LA3_0==21) ) {
+                    alt3=1;
+                }
 
 
-                    					if (current==null) {
-                    						current = createModelElementForParent(grammarAccess.getWorkDefinitionRule());
-                    					}
-                    					add(
-                    						current,
-                    						"need",
-                    						lv_need_3_0,
-                    						"fr.n7.simplepdl.txt.PDL.Need");
-                    					afterParserOrEnumRuleCall();
-                    				
+                switch (alt3) {
+            	case 1 :
+            	    // InternalPDL.g:229:4: (lv_need_3_0= ruleNeed )
+            	    {
+            	    // InternalPDL.g:229:4: (lv_need_3_0= ruleNeed )
+            	    // InternalPDL.g:230:5: lv_need_3_0= ruleNeed
+            	    {
 
-                    }
+            	    					newCompositeNode(grammarAccess.getWorkDefinitionAccess().getNeedNeedParserRuleCall_3_0());
+            	    				
+            	    pushFollow(FOLLOW_6);
+            	    lv_need_3_0=ruleNeed();
+
+            	    state._fsp--;
 
 
-                    }
-                    break;
+            	    					if (current==null) {
+            	    						current = createModelElementForParent(grammarAccess.getWorkDefinitionRule());
+            	    					}
+            	    					add(
+            	    						current,
+            	    						"need",
+            	    						lv_need_3_0,
+            	    						"fr.n7.simplepdl.txt.PDL.Need");
+            	    					afterParserOrEnumRuleCall();
+            	    				
 
-            }
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop3;
+                }
+            } while (true);
 
             otherlv_4=(Token)match(input,13,FOLLOW_2); 
 
@@ -656,7 +663,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
             // InternalPDL.g:269:2: (otherlv_0= 'note' ( (lv_text_1_0= RULE_STRING ) ) (otherlv_2= 'for' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* )? )
             // InternalPDL.g:270:3: otherlv_0= 'note' ( (lv_text_1_0= RULE_STRING ) ) (otherlv_2= 'for' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' ( (otherlv_5= RULE_ID ) ) )* )?
             {
-            otherlv_0=(Token)match(input,15,FOLLOW_8); 
+            otherlv_0=(Token)match(input,15,FOLLOW_7); 
 
             			newLeafNode(otherlv_0, grammarAccess.getGuidanceAccess().getNoteKeyword_0());
             		
@@ -666,7 +673,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
             // InternalPDL.g:275:4: (lv_text_1_0= RULE_STRING )
             // InternalPDL.g:276:5: lv_text_1_0= RULE_STRING
             {
-            lv_text_1_0=(Token)match(input,RULE_STRING,FOLLOW_9); 
+            lv_text_1_0=(Token)match(input,RULE_STRING,FOLLOW_8); 
 
             					newLeafNode(lv_text_1_0, grammarAccess.getGuidanceAccess().getTextSTRINGTerminalRuleCall_1_0());
             				
@@ -712,7 +719,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
                     							current = createModelElement(grammarAccess.getGuidanceRule());
                     						}
                     					
-                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_10); 
+                    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_9); 
 
                     						newLeafNode(otherlv_3, grammarAccess.getGuidanceAccess().getElementsProcessElementCrossReference_2_1_0());
                     					
@@ -752,7 +759,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
                     	    								current = createModelElement(grammarAccess.getGuidanceRule());
                     	    							}
                     	    						
-                    	    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_10); 
+                    	    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_9); 
 
                     	    							newLeafNode(otherlv_5, grammarAccess.getGuidanceAccess().getElementsProcessElementCrossReference_2_2_1_0());
                     	    						
@@ -858,7 +865,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
             // InternalPDL.g:348:2: (otherlv_0= 'ws' ( (lv_linkType_1_0= ruleWorkSequenceType ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) ) )
             // InternalPDL.g:349:3: otherlv_0= 'ws' ( (lv_linkType_1_0= ruleWorkSequenceType ) ) otherlv_2= 'from' ( (otherlv_3= RULE_ID ) ) otherlv_4= 'to' ( (otherlv_5= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_11); 
+            otherlv_0=(Token)match(input,18,FOLLOW_10); 
 
             			newLeafNode(otherlv_0, grammarAccess.getWorkSequenceAccess().getWsKeyword_0());
             		
@@ -871,7 +878,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getWorkSequenceAccess().getLinkTypeWorkSequenceTypeEnumRuleCall_1_0());
             				
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_11);
             lv_linkType_1_0=ruleWorkSequenceType();
 
             state._fsp--;
@@ -908,7 +915,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
             						current = createModelElement(grammarAccess.getWorkSequenceRule());
             					}
             				
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_13); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_12); 
 
             					newLeafNode(otherlv_3, grammarAccess.getWorkSequenceAccess().getPredecessorWorkDefinitionCrossReference_3_0());
             				
@@ -1021,7 +1028,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
             // InternalPDL.g:424:2: (otherlv_0= 'need' ( (lv_nbResources_1_0= RULE_INT ) ) otherlv_2= 'of' ( (otherlv_3= RULE_ID ) ) )
             // InternalPDL.g:425:3: otherlv_0= 'need' ( (lv_nbResources_1_0= RULE_INT ) ) otherlv_2= 'of' ( (otherlv_3= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,21,FOLLOW_14); 
+            otherlv_0=(Token)match(input,21,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getNeedAccess().getNeedKeyword_0());
             		
@@ -1031,7 +1038,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
             // InternalPDL.g:430:4: (lv_nbResources_1_0= RULE_INT )
             // InternalPDL.g:431:5: lv_nbResources_1_0= RULE_INT
             {
-            lv_nbResources_1_0=(Token)match(input,RULE_INT,FOLLOW_15); 
+            lv_nbResources_1_0=(Token)match(input,RULE_INT,FOLLOW_14); 
 
             					newLeafNode(lv_nbResources_1_0, grammarAccess.getNeedAccess().getNbResourcesINTTerminalRuleCall_1_0());
             				
@@ -1154,7 +1161,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
             // InternalPDL.g:482:2: (otherlv_0= 'create' ( (lv_nbAvailableResources_1_0= RULE_INT ) ) otherlv_2= 'of' ( (lv_name_3_0= RULE_ID ) ) )
             // InternalPDL.g:483:3: otherlv_0= 'create' ( (lv_nbAvailableResources_1_0= RULE_INT ) ) otherlv_2= 'of' ( (lv_name_3_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_14); 
+            otherlv_0=(Token)match(input,23,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getResourceAccess().getCreateKeyword_0());
             		
@@ -1164,7 +1171,7 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
             // InternalPDL.g:488:4: (lv_nbAvailableResources_1_0= RULE_INT )
             // InternalPDL.g:489:5: lv_nbAvailableResources_1_0= RULE_INT
             {
-            lv_nbAvailableResources_1_0=(Token)match(input,RULE_INT,FOLLOW_15); 
+            lv_nbAvailableResources_1_0=(Token)match(input,RULE_INT,FOLLOW_14); 
 
             					newLeafNode(lv_nbAvailableResources_1_0, grammarAccess.getResourceAccess().getNbAvailableResourcesINTTerminalRuleCall_1_0());
             				
@@ -1384,14 +1391,13 @@ public class InternalPDLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x000000000084E000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000202000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x000000000F000000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x000000000F000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000400000L});
 
 }

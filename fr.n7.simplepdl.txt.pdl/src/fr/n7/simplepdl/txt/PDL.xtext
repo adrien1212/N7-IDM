@@ -16,15 +16,15 @@ enum WorkSequenceType : startToStart = 'startToStart'
     | finishToFinish = 'finishToFinish';
 
 WorkDefinition : 'wd' name=ID '{'
-    (need+=Need)?
+    (need+=Need)*
 '}';
 
 Guidance: 'note' text=STRING ('for' elements+=[ProcessElement] ( "," elements+=[ProcessElement])* )?;
     
 WorkSequence : 'ws'
-	linkType=WorkSequenceType 
-	'from' predecessor=[WorkDefinition] 
-	'to' successor=[WorkDefinition];
+    linkType=WorkSequenceType 
+    'from' predecessor=[WorkDefinition] 
+    'to' successor=[WorkDefinition];
     
 Need : 'need' nbResources=INT 'of' resource=[Resource];
     

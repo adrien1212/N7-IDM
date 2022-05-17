@@ -105,12 +105,12 @@ public class PDLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//WorkDefinition : 'wd' name=ID '{'
-		//    (need+=Need)?
+		//    (need+=Need)*
 		//'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		// 'wd' name=ID '{'
-		//    (need+=Need)?
+		//    (need+=Need)*
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -126,7 +126,7 @@ public class PDLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(need+=Need)?
+		//(need+=Need)*
 		public Assignment getNeedAssignment_3() { return cNeedAssignment_3; }
 		
 		//Need
@@ -467,7 +467,7 @@ public class PDLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	}
 	
 	//WorkDefinition : 'wd' name=ID '{'
-	//    (need+=Need)?
+	//    (need+=Need)*
 	//'}';
 	public WorkDefinitionElements getWorkDefinitionAccess() {
 		return pWorkDefinition;

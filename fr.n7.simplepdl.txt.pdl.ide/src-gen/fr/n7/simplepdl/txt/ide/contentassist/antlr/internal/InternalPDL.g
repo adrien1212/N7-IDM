@@ -541,7 +541,7 @@ rule__WorkDefinition__Group__3__Impl
 :
 (
 	{ before(grammarAccess.getWorkDefinitionAccess().getNeedAssignment_3()); }
-	(rule__WorkDefinition__NeedAssignment_3)?
+	(rule__WorkDefinition__NeedAssignment_3)*
 	{ after(grammarAccess.getWorkDefinitionAccess().getNeedAssignment_3()); }
 )
 ;
