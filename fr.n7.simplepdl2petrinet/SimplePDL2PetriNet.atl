@@ -10,15 +10,17 @@ def: getProcess(): simplepdl!Process =
 		->select(p | p.processElements->includes(self))
 		->asSequence()->first();
 
+-- Traduire un Process en un PetriNet de même nom
 rule Process2PetriNet {
 	from p: simplepdl!Process
 	to pn: petrinet!PetriNet (name <- p.name)
 }
 
+-- Traduire une WorkDefinition en un motif sur le réseau de Petri
 rule WorkDefinition2PetriNet {
 	from wd: simplepdl!WorkDefinition
 	to
-		-- PLACES
+		-- PLACES d'une WorkDefinition
 		p_ready: petrinet!Place(
 			name <- wd.name + '_ready',
 			marking <- 1,
@@ -43,7 +45,7 @@ rule WorkDefinition2PetriNet {
 			petrinet <- wd.getProcess()
 		),
 		
-		-- TRANSITIONS
+		-- TRANSITIONS d'une WorkDefinition
 		t_start: petrinet!Transition(
 			name <- wd.name + '_start',
 			petrinet <- wd.getProcess()
@@ -54,7 +56,7 @@ rule WorkDefinition2PetriNet {
 			petrinet <- wd.getProcess()
 		),
 		
-		-- ARCS
+		-- ARCS d'une WorkDefinition
 		a_ready2start: petrinet!Arc(
 			weight <- 1,
 			isReadArc <- false,
@@ -97,6 +99,7 @@ rule WorkDefinition2PetriNet {
 		
 }
 
+-- Traduire un ProcessElement en un motif sur le réseau de petri
 rule WorkSequence2PetriNet {
 	from ws: simplepdl!WorkSequence
 	to aws: petrinet!Arc(
@@ -108,7 +111,7 @@ rule WorkSequence2PetriNet {
 	)
 }
 
-
+-- Traduire une Ressource en un motif sur le réseau de petri
 rule Resource2PetriNet {
 	from rs: simplepdl!Resource
 	to prs: petrinet!Place(
@@ -118,6 +121,9 @@ rule Resource2PetriNet {
 	)
 }
 
+-- Traduire un Besoin en un motif sur le réseau de petri
+-- Remarque: Need n'hérite pas de ProcessElements : en l'occurrence, on doit passer
+-- par la Resource (ou la WorkDefinition) liée au Need pour récup le Process
 rule Need2PetriNet {
 	from ne: simplepdl!Need
 	to 
